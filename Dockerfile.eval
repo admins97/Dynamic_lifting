@@ -1,0 +1,18 @@
+# Evaluation stack (Grounded-SAM) layered on top of the training image.
+FROM unified-lift:cu113
+
+ENV TORCH_CUDA_ARCH_LIST="8.6"
+ENV DEBIAN_FRONTEND=noninteractive
+
+# helpers used by GroundingDINO / segment-anything / the eval scripts
+RUN pip install --no-cache-dir \
+        matplotlib "huggingface_hub==0.20.3" addict yapf timm \
+        "supervision==0.6.0" pycocotools transformers
+
+# SAM (provides segment_anything.sam_model_registry / SamPredictor / build_sam)
+RUN pip install --no-cache-dir git+https://github.com/facebookresearch/segment-anything.git
+
+# GroundingDINO (builds CUDA ops for sm_86)
+RUN pip install --no-cache-dir git+https://github.com/IDEA-Research/GroundingDINO.git
+
+WORKDIR /workspace

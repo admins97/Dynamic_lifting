@@ -1,0 +1,26 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---- CUDA submodule build artifacts ----
+submodules/**/build/
+submodules/**/dist/
+
+# ---- Training / evaluation outputs (generated) ----
+output/
+results/
+wandb/
+save_img/
+
+# ---- Model weights fetched at setup time (too large for git) ----
+.hfcache/
+Tracking-Anything-with-DEVA/saves/
+**/sam_vit_h_4b8939.pth
+
+# ---- Docker / misc logs ----
+*.log
+
+# ---- Datasets (kept outside the repo) ----
+data/

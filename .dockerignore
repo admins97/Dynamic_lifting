@@ -1,0 +1,6 @@
+# Keep the build context small: only submodules are needed at image-build time.
+*
+!submodules
+submodules/**/build
+submodules/**/*.egg-info
+submodules/**/__pycache__

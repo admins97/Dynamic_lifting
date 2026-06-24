@@ -1,28 +1,14 @@
-# Unified-Lift (CVPR 2025)
-## [[Paper](https://github.com/Runsong123/Unified-Lift/blob/main/material/Unified_Lift.pdf)]
+# SKKU SELF 2026-1 (Dynamic lifting)
 
-> **Runsong Zhu**, Shi Qiu, Zhengzhe Liu, Ka-Hei Hui, Qianyi Wu, Pheng-Ann Heng, Chi-Wing Fu
-> 
+Course project for **SKKU SELF 2026-1**.
 
->**TL;DR**: Our paper presents a new and effective end-to-end lifting framework that achieves state-of-the-art (SOTA) performance for 3D Gaussian segmentation, without the need for pre-processing (e.g., video tracking) or post-processing (e.g., clustering).
+Built on **Unified-Lift** (CVPR 2025 — [paper](https://github.com/Runsong123/Unified-Lift/blob/main/material/Unified_Lift.pdf), [original repo](https://github.com/Runsong123/Unified-Lift)), an end-to-end framework for object-aware 3D Gaussian segmentation that needs no pre-processing (e.g., video tracking) or post-processing (e.g., clustering).
 
-
-
-### Comparisons with existing works
-
-![image](https://github.com/Runsong123/Unified-Lift/blob/main/material/Teaser.png)
-
-### 3D point-level visualization
-![image](https://github.com/Runsong123/Unified-Lift/blob/main/material/3D_Segmentation.png)
-
-
-### How to use the code. 
-To use Unified-Lift, please refer to the [Usage](doc/Usage.md) guide. (currently under construction).
-
+This repository adds two extensions to the object-level codebook and a reproducible Docker setup for training and evaluation.
 
 ---
 
-## This fork: two extensions + reproducible Docker setup
+## Extensions + reproducible Docker setup
 
 This fork adds two methodological extensions on top of the original object-level
 codebook, plus a self-contained Docker environment for training and evaluation.

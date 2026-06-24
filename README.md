@@ -70,16 +70,7 @@ Render LERF text-query masks for all scenes and compute mIoU / bIoU:
 ./docker_eval.sh 0                     # <gpu_id>; results -> results/Unifed_Lift.csv
 ```
 
-This renders each scene with `render_lerf_mask_unified_lift.py` (Grounded-SAM text query, driven by the model's own rendered RGB) and then scores predictions against `test_mask/` with `script/eval_lerf_mask_unified_lift.py`.
-
-Reproduced results (LERF-mask, iteration 30000; Docker, RTX A6000):
-
-| Scene       | mIoU  | Boundary IoU |
-|-------------|-------|--------------|
-| figurines   | 85.03 | 83.41 |
-| ramen       | 78.27 | 69.77 |
-| teatime     | 78.46 | 74.41 |
-| **average** | **80.59** | **75.86** |
+This renders each scene with `render_lerf_mask_unified_lift.py` (Grounded-SAM text query, driven by the model's own rendered RGB) and then scores predictions against `test_mask/` with `script/eval_lerf_mask_unified_lift.py`, writing per-scene mIoU / bIoU to `results/Unifed_Lift.csv`.
 
 ## Docker
 
